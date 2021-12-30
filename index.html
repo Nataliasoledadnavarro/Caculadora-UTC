@@ -1,31 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0ca0e55b9a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
     <title>Horario UTC</title>
 </head>
-<body>
-  
-<label>Dia
-    <input id="input-dia" type="Number">
-</label>
-<label>Mes
-    <input id="input-mes" type="Number">
-</label>
-<label>Año
-    <input id="input-año" type="Number">
-</label>
-<label>Hora
-    <input id="input-hora" type="Number">
-</label>Minutos
-    <input id="input-minutos" type="Number">
-</label>
 
-<button id="boton-enviar">enviar</button>
+<body class="has-background-light">
+    <nav class="navbar  has-background-danger is-mobile" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a href="https://github.com/Nataliasoledadnavarro/api-usuarios" aria-label="Ruta al github del proyecto">
+                <h1 class="title is-1 has-text-white is-size-3-mobile m-3">CALCULADOR UTC</h1>
+            </a>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <a id="link-web-luna"
+                    href="https://www.moonpage.com/index.html?go=T&auto_dst=T&totphase=WANING+CRESCENT+%2831.21%25+full%29&m=5&d=29&y=1983&hour=4&min=30&sec=21"
+                    class="button is-warning is-light m-3 ">
+                    <span class="has-text-danger">Buscar</span>
+                    <span class="icon">
+                        <i class="fas fa-moon has-text-danger"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="seccion-principal section columns">
+            <form class="box column is-5 is-offset-1">
+                <div class="field">
+                    <label class="label">Día</label>
+                    <div class="control">
+                        <input class="input" id="input-dia" type="Number" min="1" max="31">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Mes</label>
+                    <div class="control">
+                        <input class="input" id="input-mes" type="Number" min="1" max="12">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Año</label>
+                    <div class="control">
+                        <input class="input" id="input-año" type="Number">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Hora</label>
+                    <div class="control">
+                        <input class="input" id="input-hora" type="Number" min="0" max="23">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Minutos</label>
+                    <div class="control">
+                        <input class="input" id="input-minutos" type="Number" min="0" max="60">
+                    </div>
+                </div>
+                <button class="button is-danger" id="boton-calcular">Calcular</button>
+            </form>
 
-<p id="resultado"></p>
-  <script src="index.js"></script>  
+            <div class="section column is-5 is-offset-1">
+                <p class="title is-4">Tu fecha en UTC:</p>
+                <div class="box has-background-danger">
+                    <p id="resultado" class="has-background-white pl-3 has-text-weight-semibold is-size-4"></p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+
+
+    <script src="index.js"></script>
 </body>
+
 </html>
