@@ -1,4 +1,4 @@
-<img src="(https://user-images.githubusercontent.com/84355672/150389824-3c3cbf6f-467f-4bfd-9e50-07e59540e766.png" whidth = "100%">
+<img src="https://user-images.githubusercontent.com/84355672/150389824-3c3cbf6f-467f-4bfd-9e50-07e59540e766.png" whidth = "100%"/>
 
 <h1>Calculador de fecha universal</h1>
 
